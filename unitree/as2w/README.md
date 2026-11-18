@@ -1,5 +1,7 @@
 # Unitree As2W driver
 
+`companion_guide` shows the operator the documented ISS 3.0 procedure for the As2-W. Power and pair the follow remote, wear it on the right with its antenna upright, and stand to the dog's left facing the same way. Within 2.4 m, press M and listen for the robot's entry prompt. P or a joystick movement exits follow mode. The public AS2 sport client reviewed for this implementation provides no documented ISS start/stop command or readback. The resource reports `command_sent: false` and leaves mode confirmation with the operator. [Unitree As2-W user manual, printed pages 19–21](https://marketing.unitree.com/article/zh/As2-W/User_Manual.html) · [AS2 sport client](https://github.com/unitreerobotics/unitree_sdk2/blob/aaf69cb56c9d5ed63d8b284008ec3a8ab999bec1/include/unitree/robot/as2/sport/sport_client.hpp)
+
 This bundle targets the Unitree **As2W** wheel-legged robot and its SDK service documented in the Unitree
 SDK guide. It vendors Unitree's official `unitree_sdk2_python` master at
 `65691c8a8bc53b98d3976dba4dbf9d5d20b2e7f5` and uses its dedicated

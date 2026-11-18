@@ -10,6 +10,7 @@ description: "Unitree As2W — 轮足运动、特技、语音、视频、RGB 灯
 build_context_extras:
   - ../../common
 cards:
+  - { name: companion_guide, type: resource }
   - { name: model, type: resource }
   - { name: loco, type: actuator }
   - { name: loco_servo, type: actuator }

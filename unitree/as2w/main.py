@@ -175,12 +175,17 @@ class Bundle:
     def stop_all(self):
         for plugin in self.plugins: plugin.stop()
     def tools(self):
+        import companion_guide
         out = [
+            companion_guide.tool(),
             {"name": "model", "type": "resource", "description": "Unitree As2W wheel-legged robot URDF model", "inputSchema": {"type": "object", "properties": {}}},
         ]
         for plugin in self.plugins: out.extend(plugin.get_tools() if hasattr(plugin, "get_tools") else [plugin.get_tool()])
         return out
     def call(self, name, args):
+        if name == "companion_guide":
+            from companion_guide import read_guide
+            return read_guide()
         if name == "model":
             return {"urdf": (Path(__file__).with_name("resource") / "as2w.urdf").read_text()}
         for plugin in self.plugins:
